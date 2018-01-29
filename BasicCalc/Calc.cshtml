@@ -4,24 +4,21 @@
 	if(IsPost){
 		var numOne = Request["value1"];
 		var numTwo = Request["value1"];
-		var modOne = Request["add"];
-		var modTwo = Request["subtract"];
-		var modThree = Request["multiply"];
-		var modFour = Request["divide"];
+		var mod = Request.Form["modifier"];
 		
 		var numberOne = Convert.ToInt32(numOne);
 		var numberTwo = Convert.ToInt32(numTwo);
 		
-		if(modOne == true){
+		if(mod == "add"){
 			total = numberOne + numberTwo;
 		}
-		else if(modTwo == true){
+		else if(mod == "subtract"){
 			total = numberOne - numberTwo;
 		}
-		else if(modThree == true){
+		else if(mod == "multiply"){
 			total = numberOne * numberTwo;
 		}
-		else if(modFour == true){
+		else if(mod == "divide"){
 			total = numberOne / numberTwo;
 		}
 		results = total;
@@ -50,22 +47,22 @@
 		  <legend>modifier</legend>
 		  <input id='add'
 				 type='radio'
-				 name='add'
+				 name='modifier'
 				 value='add' />
 		  <label for='add' class='radio-label'>Add (+)</label>
 		  <input id='subtract'
 				 type='radio'
-				 name='subtract'
+				 name='modifier'
 				 value='subtract' />
 		  <label for='subtract' class='radio-label'>Subtract(-)</label>
 		  <input id='multiply'
 				 type='radio'
-				 name='multiply'
+				 name='modifier'
 				 value='multiply' />
 		  <label for='multiply' class='radio-label'>Multiply (*)</label>
 		  <input id='divide'
 				 type='radio'
-				 name='divide'
+				 name='modifier'
 				 value='divide' />
 		  <label for='divide' class='radio-label'>Divide (/)</label>
 		</fieldset>
