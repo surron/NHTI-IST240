@@ -6,8 +6,8 @@
 		var numTwo = Request["value1"];
 		var mod = Request.Form["modifier"];
 		
-		var numberOne = Convert.ToInt32(numOne);
-		var numberTwo = Convert.ToInt32(numTwo);
+		int numberOne = Convert.ToInt32(numOne);
+		int numberTwo = Convert.ToInt32(numTwo);
 		
 		if((numberOne || numberTwo)==null){
 			results = "ERROR there are no numbers!";
