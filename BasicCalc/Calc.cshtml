@@ -9,7 +9,10 @@
 		var numberOne = Convert.ToInt32(numOne);
 		var numberTwo = Convert.ToInt32(numTwo);
 		
-		if(mod == "add"){
+		if((numOne || numTwo)==null){
+			results = "ERROR there are no numbers!";
+		}
+		else if(mod == "add"){
 			total = numberOne + numberTwo;
 		}
 		else if(mod == "subtract"){
