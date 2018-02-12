@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "CalcApp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+   
+}
+@model string
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CalcApp</title>
+</head>
+
+<body>
+    <header class='form-header'>
+        <h1>Calculator</h1>
+    </header>
+    <form action='/Home/CalcApp' method='post' class='calc-form'>
+        <div class='form-row'>
+            <label for='value1'>Value 1</label>
+            <input id='value1' name='value1' type='text' />
+            <label for='value2'>Value 2</label>
+            <input id='value2' name='value2' type='text' />
+            <label for='results'>=</label><p>@Model</p>
+            
+        </div>
+
+        <fieldset class='Modifier'>
+            <legend>modifier</legend>
+            <input id='add'
+                   type='radio'
+                   name='modifier'
+                   value='add' />
+            <label for='add' class='radio-label'>Add (+)</label>
+            <input id='subtract'
+                   type='radio'
+                   name='modifier'
+                   value='subtract' />
+            <label for='subtract' class='radio-label'>Subtract(-)</label>
+            <input id='multiply'
+                   type='radio'
+                   name='modifier'
+                   value='multiply' />
+            <label for='multiply' class='radio-label'>Multiply (*)</label>
+            <input id='divide'
+                   type='radio'
+                   name='modifier'
+                   value='divide' />
+            <label for='divide' class='radio-label'>Divide (/)</label>
+        </fieldset>
+
+        <div class='form-row'>
+            <button>Submit</button>
+        </div>
+    </form>
+</body>
+</html>
+
